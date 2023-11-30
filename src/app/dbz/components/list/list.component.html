@@ -1,0 +1,12 @@
+<ul class="list-group">
+
+    <li *ngFor="let personaje of characterList; let i = index"
+    class="list-group-item d-flex justify-content-between align-items-center">
+      <div>
+        <span class="text-primary">{{i+1}}.</span>
+        {{personaje.name}} -
+        <strong>Power:</strong> {{personaje.power}}
+      </div>
+    <button class="btn btn-danger" (click)="deleteCharacterById(personaje.id)">x</button>
+  </li>
+</ul>
